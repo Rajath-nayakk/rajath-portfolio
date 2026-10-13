@@ -50,3 +50,5 @@ next-env.d.ts
 Thumbs.db
 [Ee]hthumbs.db
 Desktop.ini
+
+.vercel
