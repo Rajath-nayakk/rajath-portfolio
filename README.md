@@ -58,19 +58,31 @@ All personal contact details are centralized in [`src/data/portfolioData.ts`](fi
 
 ---
 
+## 🚀 Deploy to Vercel (1-Click)
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FRajath-nayakk%2Frajath-portfolio)
+
+### Quick Steps to Publish Live:
+1. Click the **Deploy with Vercel** button above or visit [vercel.com/new](https://vercel.com/new).
+2. Connect your GitHub account (`Rajath-nayakk`) and import `rajath-portfolio`.
+3. Keep default settings (`Framework: Next.js`, root directory `./`).
+4. Click **Deploy**. In under 60 seconds, your site will be live at `https://rajath-portfolio.vercel.app`.
+
+---
+
 ## 🛠️ Technology Stack
 
 - **Framework**: Next.js 16 (App Router, Turbopack)
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS & CSS Custom Properties
-- **Motion & Physics**: Framer Motion & GSAP
-- **Smooth Scroll**: Lenis
+- **Motion & Physics**: Framer Motion & GSAP ScrollTrigger
+- **Smooth Scroll**: Lenis Smooth Scrolling
 - **Audio Feedback**: Synthesized Web Audio API Drone
 - **Icons**: Custom SVG Icons & Lucide React
 
 ---
 
-## 🚀 Running Locally
+## 💻 Running Locally
 
 ```bash
 # 1. Install dependencies
@@ -83,19 +95,4 @@ npm run dev
 npm run build
 ```
 
-Available on `http://localhost:3000`.
-
----
-
-## 🚢 Deployment to Vercel
-
-1. Push your repository to GitHub:
-   ```bash
-   git init
-   git add .
-   git commit -m "feat: monumental portfolio overhaul for Rajath Nayak"
-   git branch -M main
-   git remote add origin https://github.com/Rajath-nayakk/portfolio.git
-   git push -u origin main
-   ```
-2. Import project into [Vercel](https://vercel.com) and click **Deploy**.
+The local development server runs at `http://localhost:3000`.
