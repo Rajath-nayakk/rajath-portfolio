@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-primary: #08090B;
+    --bg-secondary: #12151B;
+    --bg-card: #151821;
+    --bg-card-hover: #1A1F2C;
+    --text-primary: #F5F5F0;
+    --text-muted: #969BA5;
+    --accent: #467BFF;
+    --accent-glow: rgba(70, 123, 255, 0.25);
+    --border-subtle: rgba(255, 255, 255, 0.08);
+    --border-active: rgba(70, 123, 255, 0.4);
+  }
+
+  html {
+    scroll-behavior: auto;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    overflow-x: hidden;
+    position: relative;
+    selection-background-color: #467BFF;
+    selection-color: #ffffff;
+  }
+
+  ::selection {
+    background-color: #467BFF;
+    color: #ffffff;
+  }
+
+  /* Custom subtle scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #08090B;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #242936;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #467BFF;
+  }
+}
+
+/* Typography Headings */
+h1, h2, h3, h4, .font-heading {
+  font-family: var(--font-space-grotesk), sans-serif;
+  letter-spacing: -0.03em;
+}
+
+/* Subtle Film Grain Texture Overlay */
+.bg-grain {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Glassmorphism Card Style */
+.editorial-card {
+  background: rgba(18, 21, 27, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.editorial-card:hover {
+  border-color: rgba(70, 123, 255, 0.3);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7), 0 0 30px -10px rgba(70, 123, 255, 0.15);
+}
+
+/* Radial Gradient Glow */
+.accent-glow-spot {
+  background: radial-gradient(circle, rgba(70, 123, 255, 0.12) 0%, rgba(8, 9, 11, 0) 70%);
+}
+
+/* Text stroke for oversized editorial typography */
+.text-stroke {
+  -webkit-text-stroke: 1px rgba(245, 245, 240, 0.25);
+  color: transparent;
+  transition: all 0.5s ease;
+}
+
+.text-stroke:hover {
+  -webkit-text-stroke: 1px rgba(70, 123, 255, 0.8);
+  color: rgba(70, 123, 255, 0.1);
+}
+
+/* Lenis Recommended CSS */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
